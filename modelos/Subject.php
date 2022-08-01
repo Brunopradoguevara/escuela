@@ -11,7 +11,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/config/conexion.php");
    
 }
 
-$nuevoItem = new Subject();
+/* $nuevoItem = new Subject(); */
 
 
 /* var_dump($nuevoItem->all());

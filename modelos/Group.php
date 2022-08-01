@@ -1,6 +1,6 @@
 <?php
-
-include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php");
+ include_once($_SERVER['DOCUMENT_ROOT']."/config/conexion.php"); 
+ /* include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php");  */
 
  class Group extends Conexion{
     protected $table = "group_";
@@ -11,7 +11,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php");
    
 }
 
-$nuevoItem = new Group();
+/* $nuevoItem = new Group();
 
 
-var_dump($nuevoItem->all());
+var_dump($nuevoItem->all()); */

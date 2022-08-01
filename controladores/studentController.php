@@ -1,11 +1,11 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT']."/modelos/Subject.php");     
+require_once($_SERVER['DOCUMENT_ROOT']."/modelos/Student.php");      
 require_once("BaseController.php");
 require_once("Request.php");
 
 
-class SubjectController extends BaseController{
+class StudentController extends BaseController{
   
     
   
@@ -17,7 +17,7 @@ class SubjectController extends BaseController{
     );
     
     try{
-        $item = new Subject();
+        $item = new Student();
         $response['data'] = $item->all();
         
     }catch(Exception $e){
@@ -35,7 +35,7 @@ class SubjectController extends BaseController{
     );
     
     try{
-        $item = new Subject();
+        $item = new Student();
         $response['data'] = $item->delete($params["id"]);
         
     }catch(Exception $e){
@@ -55,8 +55,8 @@ class SubjectController extends BaseController{
     
     try{
         $request = new Request();
-        $item = new Subject();
-        $response['data'] = $item->update($request->all(),$request->pk_id);
+        $item = new Student();
+        $response['data'] = $item->update($request->all(),$request->pk_LRN);
         
     }catch(Exception $e){
         $response['code'] = 500;
@@ -75,7 +75,7 @@ class SubjectController extends BaseController{
     );
     
     try{
-        $item = new Subject();
+        $item = new Student();
         $response['data'] = $item->create($request->all());
         
     }catch(Exception $e){
@@ -88,10 +88,9 @@ class SubjectController extends BaseController{
 
 }
 
-/* 
-$item = new SubjectController();
+/* $item = new StudentController(); */
 
 
-$datas=array('pk_id'=>8,'teacher'=>"Juan",'name_subjects'=>"quimica");
+/* $datas=array('pk_id'=>8,'teacher'=>"Juan",'name_Students'=>"quimica"); */
 
-var_dump($item->create($datas)); */
+/* var_dump($item->delete(2));  */

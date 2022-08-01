@@ -1,17 +1,59 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/config/routing.php");
 
-require_once($_SERVER['DOCUMENT_ROOT']."/controladores/SubjectController.php");
+require 'config/routing.php';
+require 'controladores/SubjectController.php';
+require 'controladores/studentController.php';
+ require 'controladores/groupController.php';
+require 'controladores/gradeController.php';  
 
 $router = new Routing();
 
-$router->add('/',function(){
+$router->get('/', function(){
   echo "Hola Mundo - Esta es una ruta simple";
 });
 
 //de esta manera llamamos una funcion dentro de una clase
 //class @ method
-$router->add('/subject','SubjectController@index');
+
+/* Subject */
+$router->get('/api/subject','SubjectController@index');
+
+$router->delete('/api/subject/delete/:id','SubjectController@delete');
+
+$router->post('/api/subject/create','SubjectController@create');
+
+$router->put('/api/subject/update','SubjectController@update');
+
+/* Student */
+$router->get('/api/student','StudentController@index');
+
+$router->delete('/api/student/delete/:id','StudentController@delete');
+
+$router->post('/api/student/create','StudentController@create');
+
+$router->put('/api/student/update','StudentController@update');
+
+/* Group */
+$router->get('/api/group','GroupController@index');
+
+$router->delete('/api/group/delete/:id','GroupController@delete');
+
+$router->post('/api/group/create','GroupController@create');
+
+$router->put('/api/group/update','GroupController@update');
+
+/* Grade */
+$router->get('/api/grade','GradeController@index');
+
+$router->delete('/api/grade/delete/:id','GradeController@delete');
+
+$router->post('/api/grade/create','GradeController@create');
+
+$router->put('/api/grade/update','GradeController@update');
+
+
+
+
 
 $router->run();
 

@@ -1,6 +1,6 @@
 <?php
-
-include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/config/conexion.php"); 
+/* include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php"); */
 
  class Grade extends Conexion{
     protected $table = "grade";
@@ -10,7 +10,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/cursoPHP/escuela/config/conexion.php");
     protected $data =["pk_id","name_grade","fk_subject"]; 
 }
 
-$nuevoItem = new Grade();
+/* $nuevoItem = new Grade(); */
 
 
-var_dump($nuevoItem->all());
+/* var_dump($nuevoItem->all()); */
