@@ -5,7 +5,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/config/conexion.php");
  class Subject extends Conexion{
     protected $table = "subject";
    // protected $hiden = ["fecha_cumpleaños"];
-    protected $show = ["teacher","pk_id"];
+    protected $show = ["teacher","pk_id","name_subjects"];
     protected $primary_key = "pk_id";
     protected $data =["pk_id","teacher","name_subjects"]; 
    

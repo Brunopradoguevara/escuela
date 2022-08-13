@@ -18,7 +18,7 @@ $router->get('/', function(){
 /* Subject */
 $router->get('/api/subject','SubjectController@index');
 
-$router->delete('/api/subject/delete/:id','SubjectController@delete');
+$router->post('/api/subject/delete/:id','SubjectController@delete');
 
 $router->post('/api/subject/create','SubjectController@create');
 
@@ -27,7 +27,7 @@ $router->put('/api/subject/update','SubjectController@update');
 /* Student */
 $router->get('/api/student','StudentController@index');
 
-$router->delete('/api/student/delete/:id','StudentController@delete');
+$router->post('/api/student/delete/:id','StudentController@delete');
 
 $router->post('/api/student/create','StudentController@create');
 
@@ -36,7 +36,7 @@ $router->put('/api/student/update','StudentController@update');
 /* Group */
 $router->get('/api/group','GroupController@index');
 
-$router->delete('/api/group/delete/:id','GroupController@delete');
+$router->post('/api/group/delete/:id','GroupController@delete');
 
 $router->post('/api/group/create','GroupController@create');
 
@@ -45,7 +45,7 @@ $router->put('/api/group/update','GroupController@update');
 /* Grade */
 $router->get('/api/grade','GradeController@index');
 
-$router->delete('/api/grade/delete/:id','GradeController@delete');
+$router->post('/api/grade/delete/:id','GradeController@delete');
 
 $router->post('/api/grade/create','GradeController@create');
 

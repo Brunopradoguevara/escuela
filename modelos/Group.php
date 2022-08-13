@@ -5,7 +5,7 @@
  class Group extends Conexion{
     protected $table = "group_";
    // protected $hiden = ["fecha_cumpleaños"];
-    protected $show = ["nomber_group","pk_id"];
+    protected $show =["pk_id","nomber_group","size_group","fk_grade"]; 
     protected $primary_key = "pk_id";
     protected $data =["pk_id","nomber_group","size_group","fk_grade"]; 
    
